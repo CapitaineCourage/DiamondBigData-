@@ -12,4 +12,34 @@ sqoop import --connect jdbc:mysql://cxln2.c.thelab-240901.internal/retail_db --u
 # copier les fichiers dataset sur HDFS (commande HDFS)
 
 # Afficher le contenu d'un des fichiers HDFS copié (commande HDFS)
+
 # faire une copie d'un fichier datset de HDFS vers le système de fichier local (commande HDFS)
+
+# ingestion_diamond_sio_tuned.sh 
+	# faire varier les différents parametres et observer les performences de mapred
+
+### importer les données de ma base Mysql vers une table Hive cible 
+
+# # cosulter la taille des fichiers copiés sur HDFS (commande HDFS)
+
+# noter le temps d'excession des imports (text/parquetfile)
+# job_id=getId()
+# mapred job -status job_1627727389933_7462 | grep "CPU time"
+
+# Path filePath = ((FileSplit) context.getInputSplit()).getPath();
+# String filePathString = ((FileSplit) context.getInputSplit()).getPath().toString();
+
+# comparer les tailles entres les differents imports 
+	# I=hdfs dfs -du -h -s /user/jordanetsafack6744/bigdata/input/diamond/text/olist_customers
+	# J=hdfs dfs -du -h -s /user/jordanetsafack6744/bigdata/input/diamond/parquetfile/olist_customers
+
+	# I=hdfs dfs -du -h -s /user/jordanetsafack6744/bigdata/input/diamond/text/olist_geolocation
+	# J=hdfs dfs -du -h -s /user/jordanetsafack6744/bigdata/input/diamond/parquetfile/olist_geolocation
+
+# I=hdfs dfs -du -h -s filePathString
+# J=hdfs dfs -du -h -s 
+# if [ $I -eq $J ]
+# then
+# echo $i $j >> $1.pares
+# fi
+

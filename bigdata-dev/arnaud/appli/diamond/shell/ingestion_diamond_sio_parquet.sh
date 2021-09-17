@@ -1,4 +1,5 @@
-
+#!/bin/bash
+ 
 #Nonbre de lignes de olist_customers :
 sqoop eval --connect jdbc:mysql://cxln2.c.thelab-240901.internal/retail_db --username sqoopuser  --password NHkkP876rp --query "SELECT count(*) FROM olist_customers"
 # importation de la table olist_customers au format parquetfile
