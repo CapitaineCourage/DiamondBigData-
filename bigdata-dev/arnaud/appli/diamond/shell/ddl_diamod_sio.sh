@@ -14,6 +14,19 @@ echo time ls -l
 
 # rediriger les logs dans un fichier log le fichier vas porter le nom du sh_timestamp.log (à stoquer dans logapp)
 LOG_FILE=sh_timestamp.log 
-exec &> sh_timestamp.log
 #exec $LOG_FILE
+
+# faire une copie d'un fichier datset de HDFS vers le système de fichier local (commande HDFS)
+
+# # cosulter la taille des fichiers copiés sur HDFS (commande HDFS)
+
+# noter le temps d'excession des imports (text/parquetfile)
+# job_id=getId()
+# mapred job -status job_1627727389933_7462 | grep "CPU time"
+
+# Path filePath = ((FileSplit) context.getInputSplit()).getPath();
+# String filePathString = ((FileSplit) context.getInputSplit()).getPath().toString();
+
+# comparer les tailles entres les differents imports 
+
 
